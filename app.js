@@ -299,7 +299,7 @@ const enhancedKnowledgeBase = {
 class OpenAIIntegration {
     constructor() {
         this.apiKey = this.getStoredApiKey();
-        this.model = localStorage.getItem('leeila_ai_model') || 'gpt-3.5-turbo';
+        this.model = localStorage.getItem('leeila_ai_model') || 'GPT-4.1-mini';
         this.usageCount = parseInt(localStorage.getItem('leeila_usage_count') || '0');
         this.lastUsageReset = localStorage.getItem('leeila_usage_reset') || new Date().toDateString();
         this.maxDailyUsage = 100;
