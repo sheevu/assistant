@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudarshan AI Labs - Your Digital Transformation Partner | Namastey 🙏</title>
+    <title>Leeila AI Agent - Sudarshan AI Labs | Your Digital Transformation Partner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,213 +13,283 @@
             <div class="header-content">
                 <div class="logo-section">
                     <h1 class="company-name">🚀 Sudarshan AI Labs</h1>
-                    <p class="tagline">India's Leading AI Innovation Hub - Democratizing Technology for 600+ Million Indians</p>
+                    <p class="tagline">India's Leading AI Innovation Hub</p>
                 </div>
                 <div class="header-actions">
-                    <div class="status-indicator">
-                        <div class="status-dot"></div>
-                        <span>AI Assistant Online</span>
+                    <div class="api-status-indicator" id="apiStatus">
+                        <div class="status-dot disconnected"></div>
+                        <span>AI Offline</span>
                     </div>
-                    <button class="btn btn--primary" id="quickQuoteBtn">💰 Quick Quote</button>
+                    <button class="settings-btn" id="settingsBtn" title="AI Settings">
+                        ⚙️
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Welcome Banner -->
-    <div class="welcome-banner">
-        <div class="container">
-            <div class="welcome-content">
-                <div class="welcome-greeting">
-                    <h2 class="namaste-greeting">🙏 Namastey! Welcome to Sudarshan AI Labs</h2>
-                    <p class="welcome-subtitle">आपका डिजिटल transformation partner | Your trusted AI-powered business solutions</p>
-                </div>
-                <div class="welcome-highlights">
-                    <div class="highlight-card">
-                        <div class="highlight-number">₹89</div>
-                        <div class="highlight-text">Starting Price</div>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-number">600M+</div>
-                        <div class="highlight-text">Indians Served</div>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-number">10K+</div>
-                        <div class="highlight-text">Success Stories</div>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-number">2 Min</div>
-                        <div class="highlight-text">Quick Setup</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Main Container -->
     <div class="main-container">
         <div class="container">
-            <div class="app-layout">
-                <!-- Service Categories Sidebar -->
-                <aside class="services-sidebar">
-                    <div class="business-selector">
-                        <h3>Select Your Business Type</h3>
-                        <select id="businessType" class="form-control">
-                            <option value="">Choose your business</option>
-                            <option value="kirana">🏪 Kirana Store</option>
-                            <option value="restaurant">🍽️ Restaurant</option>
-                            <option value="professional">👔 Professional Service</option>
-                            <option value="retail">🛍️ Retail Shop</option>
-                            <option value="manufacturing">🏭 Manufacturing</option>
-                            <option value="agriculture">🌾 Agriculture/Farming</option>
-                            <option value="startup">💡 Startup</option>
-                        </select>
-                    </div>
-
-                    <div class="service-categories">
-                        <h3>Service Categories</h3>
-                        <div class="category-filters">
-                            <button class="category-btn active" data-category="all">🔍 All Services</button>
-                            <button class="category-btn" data-category="Website">🌐 Website</button>
-                            <button class="category-btn" data-category="Marketing">📈 Marketing</button>
-                            <button class="category-btn" data-category="AI Solutions">🤖 AI Solutions</button>
-                            <button class="category-btn" data-category="Content">✍️ Content</button>
-                            <button class="category-btn" data-category="Automation">⚙️ Automation</button>
-                            <button class="category-btn" data-category="Development">💻 Development</button>
-                            <button class="category-btn" data-category="Consultation">💼 Consultation</button>
+            <!-- Chat Interface - TOP PRIORITY FOR MOBILE -->
+            <div class="chat-container" id="chatContainer">
+                <div class="chat-header">
+                    <div class="agent-info">
+                        <div class="agent-avatar">🙏</div>
+                        <div class="agent-details">
+                            <h3 class="gradient-text-heading">Leeila AI Agent</h3>
+                            <p>Your Intelligent Digital Assistant</p>
                         </div>
                     </div>
-
-                    <div class="price-filter">
-                        <h4>Price Range</h4>
-                        <div class="price-options">
-                            <label><input type="checkbox" value="budget" checked> Under ₹500</label>
-                            <label><input type="checkbox" value="standard" checked> ₹500 - ₹2,000</label>
-                            <label><input type="checkbox" value="premium" checked> Above ₹2,000</label>
+                    <div class="chat-status">
+                        <span class="status--success">Online</span>
+                        <div class="usage-indicator" id="usageIndicator" style="display: none;">
+                            <span id="usageCount">0/100</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="company-highlights">
-                        <h4>Why Choose Us?</h4>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🇮🇳</span>
-                            <span>Made for India</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">💰</span>
-                            <span>Starting ₹89</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🗣️</span>
-                            <span>Hindi Support</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">📱</span>
-                            <span>Mobile First</span>
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- Main Chat and Services Area -->
-                <main class="main-content">
-                    <!-- Service Cards Grid -->
-                    <div class="services-grid" id="servicesGrid">
-                        <div class="services-header">
-                            <h2>Our Services & Pricing</h2>
-                            <div class="view-toggle">
-                                <button class="view-btn active" data-view="grid">🔲 Grid</button>
-                                <button class="view-btn" data-view="list">📋 List</button>
-                            </div>
-                        </div>
-                        <div class="services-container" id="servicesContainer">
-                            <!-- Services will be populated by JavaScript -->
-                        </div>
-                    </div>
-
-                    <!-- Chat Interface -->
-                    <div class="chat-container" id="chatContainer">
-                        <div class="chat-header">
-                            <div class="agent-info">
-                                <div class="agent-avatar">🙏</div>
-                                <div class="agent-details">
-                                    <h3>Sudarshan AI Assistant</h3>
-                                    <p>Your Digital Transformation Guide</p>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message agent-message">
+                        <div class="message-avatar">🙏</div>
+                        <div class="message-content">
+                            <div class="message-bubble">
+                                <p><strong>Namastey 🙏 Main Leeila hoon, Sudarshan AI Labs ki AI assistant!</strong></p>
+                                <p>I'm your dedicated AI assistant, ready to help you transform your business digitally with the power of advanced AI.</p>
+                                <p>हम आपके व्यवसाय को डिजिटल बनाने में मदद करने के लिए यहां हैं। Our services start from just <strong>₹89</strong> and are designed specifically for Indian MSMEs.</p>
+                                <div class="quick-highlights">
+                                    <div>🌐 Complete digital storefronts</div>
+                                    <div>🤖 AI-powered business solutions</div>
+                                    <div>📱 Mobile-first approach</div>
+                                    <div>💳 Indian payment gateway integration</div>
                                 </div>
+                                <p><strong>क्या मैं आपकी किसी तरह से मदद कर सकूं? I can provide both pre-programmed responses and AI-powered answers!</strong></p>
                             </div>
-                            <button class="chat-toggle" id="chatToggle">💬 Chat</button>
+                            <div class="message-time">Just now</div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="chat-messages" id="chatMessages">
-                            <div class="message agent-message">
-                                <div class="message-avatar">🙏</div>
-                                <div class="message-content">
-                                    <div class="message-bubble">
-                                        <p><strong>Namastey 🙏 Welcome to Sudarshan AI Labs!</strong></p>
-                                        <p>I'm your dedicated AI assistant, ready to help you transform your business digitally.</p>
-                                        <p>हम आपके व्यवसाय को डिजिटल बनाने में मदद करने के लिए यहां हैं। Our services start from just <strong>₹89</strong> and are designed specifically for Indian MSMEs, farmers, and entrepreneurs.</p>
-                                        <ul>
-                                            <li>🌐 Complete digital storefronts</li>
-                                            <li>🤖 AI-powered business solutions</li>
-                                            <li>📱 Mobile-first approach</li>
-                                            <li>💳 Indian payment gateway integration</li>
-                                        </ul>
-                                        <p><strong>क्या मैं आपकी किसी तरह से मदद कर सकता हूं?</strong> Ask me about our services, pricing, or get personalized recommendations for your business!</p>
-                                    </div>
-                                    <div class="message-time">Just now</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="typing-indicator" id="typingIndicator" style="display: none;">
-                            <div class="message agent-message">
-                                <div class="message-avatar">🙏</div>
-                                <div class="message-content">
-                                    <div class="typing-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="chat-input-section">
-                            <div class="quick-questions">
-                                <button class="quick-btn" data-query="What's included in the ₹89 package?">₹89 Package Details</button>
-                                <button class="quick-btn" data-query="Recommend services for my business">Business Recommendations</button>
-                                <button class="quick-btn" data-query="How does WhatsApp integration work?">WhatsApp Bot Setup</button>
-                                <button class="quick-btn" data-query="Tell me about AI-Saathi for farmers">AI for Farmers</button>
-                            </div>
-                            <div class="input-container">
-                                <input 
-                                    type="text" 
-                                    id="messageInput" 
-                                    placeholder="Ask me anything... आप मुझसे कुछ भी पूछ सकते हैं..."
-                                    class="message-input"
-                                >
-                                <button id="sendButton" class="send-btn">
-                                    <span>Send</span>
-                                    <span class="send-icon">📤</span>
-                                </button>
+                <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                    <div class="message agent-message">
+                        <div class="message-avatar">🙏</div>
+                        <div class="message-content">
+                            <div class="typing-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
                         </div>
                     </div>
-                </main>
+                </div>
+
+                <div class="chat-input-section">
+                    <div class="quick-questions">
+                        <button class="quick-btn" data-query="What's included in the ₹89 package?">₹89 Package</button>
+                        <button class="quick-btn" data-query="Recommend services for my business">Business Help</button>
+                        <button class="quick-btn" data-query="How does WhatsApp integration work?">WhatsApp Bot</button>
+                        <button class="quick-btn" data-query="Tell me about AI-powered solutions">AI Solutions</button>
+                    </div>
+                    <div class="input-container">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            placeholder="Ask Leeila anything... मुझसे कुछ भी पूछें..."
+                            class="message-input"
+                        >
+                        <button id="sendButton" class="send-btn">
+                            <span class="send-icon">📤</span>
+                        </button>
+                    </div>
+                    <div class="ai-mode-selector">
+                        <label class="mode-switch">
+                            <input type="checkbox" id="aiModeToggle">
+                            <span class="slider"></span>
+                            <span class="mode-label">AI-Powered Responses</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions Section -->
+            <div class="quick-actions-section">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <button class="action-btn" id="quickQuoteBtn">
+                        <div class="action-icon">💰</div>
+                        <div class="action-text">
+                            <div class="action-title">Quick Quote</div>
+                            <div class="action-desc">Get instant pricing</div>
+                        </div>
+                    </button>
+                    <button class="action-btn" id="businessTypeBtnAction">
+                        <div class="action-icon">🏪</div>
+                        <div class="action-text">
+                            <div class="action-title">Business Type</div>
+                            <div class="action-desc">Get recommendations</div>
+                        </div>
+                    </button>
+                    <button class="action-btn" id="consultationBtn">
+                        <div class="action-icon">📞</div>
+                        <div class="action-text">
+                            <div class="action-title">Free Consultation</div>
+                            <div class="action-desc">Talk to expert</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Business Type Selector -->
+            <div class="business-selector-section">
+                <h3>Select Your Business Type</h3>
+                <div class="business-types" id="businessTypes">
+                    <button class="business-type-btn" data-type="kirana">🏪 Kirana Store</button>
+                    <button class="business-type-btn" data-type="restaurant">🍽️ Restaurant</button>
+                    <button class="business-type-btn" data-type="professional">👔 Professional Service</button>
+                    <button class="business-type-btn" data-type="retail">🛍️ Retail Shop</button>
+                    <button class="business-type-btn" data-type="manufacturing">🏭 Manufacturing</button>
+                    <button class="business-type-btn" data-type="startup">💡 Startup</button>
+                </div>
+            </div>
+
+            <!-- Featured Services -->
+            <div class="featured-services">
+                <h3>Our Popular Services</h3>
+                <div class="service-highlight">
+                    <div class="highlight-badge">Most Popular</div>
+                    <div class="service-summary">
+                        <h4>₹89 Online Store Package</h4>
+                        <p>Complete digital storefront setup in just 2 minutes</p>
+                        <button class="btn btn--primary" onclick="askAboutService('Start Your Online Store')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Pricing Grid -->
+            <div class="services-grid" id="servicesGrid">
+                <div class="services-header">
+                    <h3>All Services & Pricing</h3>
+                    <div class="view-controls">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="budget">Under ₹500</button>
+                        <button class="filter-btn" data-filter="popular">Popular</button>
+                    </div>
+                </div>
+                <div class="services-container" id="servicesContainer">
+                    <!-- Services will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Company Highlights -->
+            <div class="company-highlights">
+                <h3>Why Choose Sudarshan AI Labs?</h3>
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🇮🇳</div>
+                        <div class="highlight-content">
+                            <div class="highlight-title">Made for India</div>
+                            <div class="highlight-desc">Designed for Indian MSMEs</div>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">💰</div>
+                        <div class="highlight-content">
+                            <div class="highlight-title">Starting ₹89</div>
+                            <div class="highlight-desc">Affordable for everyone</div>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🗣️</div>
+                        <div class="highlight-content">
+                            <div class="highlight-title">Hindi Support</div>
+                            <div class="highlight-desc">Full local language support</div>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🤖</div>
+                        <div class="highlight-content">
+                            <div class="highlight-title">AI-Powered</div>
+                            <div class="highlight-desc">Advanced AI assistance</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Service Comparison Modal -->
-    <div class="modal hidden" id="comparisonModal">
-        <div class="modal-backdrop" id="comparisonBackdrop"></div>
-        <div class="modal-content large">
+    <!-- Settings Modal -->
+    <div class="modal hidden" id="settingsModal">
+        <div class="modal-backdrop" id="settingsBackdrop"></div>
+        <div class="modal-content">
             <div class="modal-header">
-                <h3>Service Comparison</h3>
-                <button class="modal-close" id="comparisonClose">✕</button>
+                <h3>⚙️ AI Settings</h3>
+                <button class="modal-close" id="settingsClose">✕</button>
             </div>
             <div class="modal-body">
-                <div id="comparisonContent">
-                    <!-- Comparison content will be populated by JavaScript -->
+                <div class="settings-section">
+                    <h4>OpenAI Integration</h4>
+                    <div class="form-group">
+                        <label class="form-label">API Key</label>
+                        <div class="api-key-input-container">
+                            <input 
+                                type="password" 
+                                id="apiKeyInput" 
+                                class="form-control" 
+                                placeholder="sk-..."
+                            >
+                            <button type="button" id="toggleApiKey" class="toggle-btn">👁️</button>
+                        </div>
+                        <div class="api-key-help">
+                            <p class="help-text">🔒 Your API key is stored securely in your browser only</p>
+                            <p class="help-text">🚨 Never share your API key with anyone</p>
+                            <p class="help-text">💡 Get your key from <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI Platform</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">AI Model</label>
+                        <select id="modelSelect" class="form-control">
+                            <option value="gpt-3.5-turbo">GPT-3.5 Turbo (Recommended)</option>
+                            <option value="gpt-4">GPT-4 (Advanced)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="connection-status" id="connectionStatus">
+                        <div class="status-item">
+                            <span class="status-label">Connection:</span>
+                            <span class="status-value" id="connectionValue">Disconnected</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Usage Today:</span>
+                            <span class="status-value" id="usageValue">0 requests</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Rate Limit:</span>
+                            <span class="status-value">100 requests/day</span>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-actions">
+                        <button class="btn btn--primary btn--full-width" id="testConnectionBtn">
+                            🔌 Test Connection
+                        </button>
+                        <button class="btn btn--outline btn--full-width" id="clearApiKeyBtn">
+                            🗑️ Clear API Key
+                        </button>
+                    </div>
+                    
+                    <div class="security-warning">
+                        <div class="warning-header">
+                            <span class="warning-icon">⚠️</span>
+                            <strong>Security Notice</strong>
+                        </div>
+                        <ul class="warning-list">
+                            <li>API keys are stored locally in your browser</li>
+                            <li>Keys are never sent to our servers</li>
+                            <li>Clear your key before using shared computers</li>
+                            <li>Monitor your OpenAI usage regularly</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -235,7 +305,7 @@
             </div>
             <div class="modal-body">
                 <div class="quote-calculator">
-                    <h4>Select Services for Your Quote</h4>
+                    <h4 class="gradient-text-heading">Select Services for Your Quote</h4>
                     <div id="quoteServices">
                         <!-- Quote services will be populated by JavaScript -->
                     </div>
@@ -262,7 +332,7 @@
         <div class="modal-backdrop" id="contactBackdrop"></div>
         <div class="modal-content">
             <div class="modal-header">
-                <h3>🤝 Let's Connect</h3>
+                <h3>🤝 Free Consultation</h3>
                 <button class="modal-close" id="contactClose">✕</button>
             </div>
             <div class="modal-body">
@@ -283,27 +353,20 @@
                         <label class="form-label">Business Type / व्यवसाय का प्रकार</label>
                         <select id="contactBusinessType" class="form-control">
                             <option value="">Select business type</option>
-                            <option value="kirana">Kirana Store</option>
-                            <option value="restaurant">Restaurant</option>
-                            <option value="professional">Professional Service</option>
-                            <option value="retail">Retail Shop</option>
-                            <option value="manufacturing">Manufacturing</option>
-                            <option value="agriculture">Agriculture/Farming</option>
-                            <option value="startup">Startup</option>
+                            <option value="kirana">🏪 Kirana Store</option>
+                            <option value="restaurant">🍽️ Restaurant</option>
+                            <option value="professional">👔 Professional Service</option>
+                            <option value="retail">🛍️ Retail Shop</option>
+                            <option value="manufacturing">🏭 Manufacturing</option>
+                            <option value="startup">💡 Startup</option>
                         </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Services Interested In</label>
-                        <div class="service-checkboxes" id="contactServices">
-                            <!-- Will be populated by JavaScript -->
-                        </div>
                     </div>
                     <div class="contact-actions">
                         <button class="btn btn--primary btn--full-width" id="submitContactBtn">
-                            📞 Schedule Consultation Call
+                            📞 Schedule Free Consultation
                         </button>
                         <div class="whatsapp-contact">
-                            <p>या WhatsApp पर तुरंत बात करें:</p>
+                            <p class="gradient-text-accent">या WhatsApp पर तुरंत बात करें:</p>
                             <a href="https://wa.me/919876543210?text=Namastey! I'm interested in Sudarshan AI Labs services" target="_blank" class="btn btn--secondary btn--full-width">
                                 📱 Chat on WhatsApp
                             </a>
@@ -340,28 +403,19 @@
                     <div class="footer-contact">
                         <span>📍 Lucknow, Uttar Pradesh</span>
                         <span>🌐 Made in India, for India</span>
+                        <span>🤖 Powered by Leeila AI Agent</span>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Key Initiatives</h4>
-                    <ul>
-                        <li>🌾 AI-Saathi for Farmers</li>
-                        <li>🏪 Kirana AI for Local Shops</li>
-                        <li>🎓 AI Skilling Programs</li>
-                        <li>💡 Startup Acceleration</li>
-                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Connect With Us</h4>
                     <div class="social-links">
                         <a href="https://wa.me/919876543210" target="_blank" class="social-link">📱 WhatsApp</a>
                         <a href="mailto:contact@sudarshanailabs.com" class="social-link">📧 Email</a>
-                        <a href="#" class="social-link">🌐 Website</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Sudarshan AI Labs - Empowering India's Digital Transformation | Starting at ₹89/month</p>
+                <p>&copy; 2025 Sudarshan AI Labs - Empowering India's Digital Transformation | Starting at ₹89</p>
             </div>
         </div>
     </footer>
