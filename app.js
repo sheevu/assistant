@@ -1,4 +1,5 @@
-// Enhanced Sudarshan AI Labs Assistant Application
+// Enhanced Leeila AI Agent Application with OpenAI Integration
+// Mobile-First Responsive Design for Sudarshan AI Labs with High-Visibility Gradient Text
 
 // Comprehensive service data
 const servicesData = [
@@ -177,13 +178,6 @@ const businessRecommendations = {
         benefits: "Streamline operations and reach B2B clients effectively",
         story: "Gupta Industries automated inventory management, reducing costs by ₹50,000/month!"
     },
-    agriculture: {
-        name: "Agriculture/Farming",
-        emoji: "🌾",
-        recommended: ["AI Chatbot & Assistant Development", "WhatsApp Business Bot Setup", "Social Media Marketing"],
-        benefits: "Connect with buyers directly and get better prices for produce",
-        story: "Farmer Suresh from Mathura now sells directly to 50+ buyers, earning 30% more profit!"
-    },
     startup: {
         name: "Startup",
         emoji: "💡",
@@ -193,14 +187,33 @@ const businessRecommendations = {
     }
 };
 
-// Enhanced Knowledge Base with Indian cultural elements
+// Enhanced Knowledge Base with Indian cultural elements and gradient text considerations
 const enhancedKnowledgeBase = {
     "greeting": {
-        keywords: ["hello", "hi", "namaste", "namastey", "हैलो", "नमस्ते"],
+        keywords: ["hello", "hi", "namaste", "namastey", "हैलो", "नमस्ते", "leeila", "who are you"],
         responses: [
             {
-                text: "Namastey 🙏 Welcome to Sudarshan AI Labs! I'm delighted to help you transform your business digitally. हमारा मिशन है भारत के 600+ million लोगों को technology से जोड़ना।",
-                followUp: "Which type of business do you run? I can provide personalized recommendations based on your needs!"
+                text: "Namastey 🙏 Main Leeila hoon, Sudarshan AI Labs ki advanced AI assistant! I'm here to help you transform your business digitally. हमारा मिशन है भारत के 600+ million लोगों को technology से जोड़ना।",
+                followUp: "I can provide both quick answers and AI-powered responses! Which type of business do you run? I can provide personalized recommendations based on your needs!"
+            }
+        ]
+    },
+    "ai_features": {
+        keywords: ["ai", "artificial intelligence", "machine learning", "ai-powered", "intelligent", "smart"],
+        responses: [
+            {
+                text: "🤖 As Leeila AI Agent, I offer both pre-programmed responses और advanced AI capabilities! Here's what makes me special:",
+                features: [
+                    "🧠 AI-powered conversations using OpenAI technology",
+                    "💬 Bilingual support (Hindi + English)",
+                    "📊 Real-time business analysis and recommendations",
+                    "🎯 Personalized solutions based on your business type",
+                    "📈 Data-driven insights for growth strategies",
+                    "🔄 Continuous learning from interactions",
+                    "⚡ Instant responses with fallback options",
+                    "🔒 Secure and private conversation handling"
+                ],
+                followUp: "Enable AI-powered responses in settings for enhanced conversations! Want to know more about any specific AI feature?"
             }
         ]
     },
@@ -227,7 +240,7 @@ const enhancedKnowledgeBase = {
         keywords: ["help", "business", "benefits", "advantage", "profit", "sales", "revenue", "grow"],
         responses: [
             {
-                text: "हमारे solutions specifically Indian businesses को mind में रखकर बनाए गए हैं! Here's how we transform businesses:",
+                text: "हमारे AI-powered solutions specifically Indian businesses को mind में रखकर बनाए गए हैं! Here's how we transform businesses:",
                 features: [
                     "📈 Average 40-60% increase in monthly revenue",
                     "🌍 Reach customers beyond your local area",
@@ -238,26 +251,7 @@ const enhancedKnowledgeBase = {
                     "📊 Make data-driven decisions with analytics",
                     "🗣️ Support in Hindi & regional languages"
                 ],
-                followUp: "Our success rate is 95%+ for MSMEs! Tell me about your business type for personalized recommendations."
-            }
-        ]
-    },
-    "payment_methods": {
-        keywords: ["payment", "gateway", "upi", "paytm", "phonepe", "gpay", "card", "transaction"],
-        responses: [
-            {
-                text: "हम सभी popular Indian payment methods support करते हैं! Your customers can pay easily:",
-                features: [
-                    "📱 All UPI apps (Google Pay, PhonePe, Paytm, BHIM)",
-                    "💳 All major debit/credit cards (Visa, Mastercard, RuPay)",
-                    "🏦 Net banking from 100+ Indian banks",
-                    "💰 Popular wallets (Paytm, Mobikwik, Amazon Pay)",
-                    "🔒 Bank-grade security with SSL encryption",
-                    "⚡ Instant payment confirmations",
-                    "📊 Real-time transaction tracking",
-                    "💸 Lowest transaction fees in industry"
-                ],
-                followUp: "Payments are processed within 24-48 hours directly to your bank account. Any specific payment questions?"
+                followUp: "Our success rate is 95%+ for MSMEs! Tell me about your business type for personalized AI-powered recommendations."
             }
         ]
     },
@@ -267,12 +261,12 @@ const enhancedKnowledgeBase = {
             {
                 text: "Our WhatsApp Business Bot is super popular! 90% of Indian customers prefer WhatsApp communication:",
                 features: [
-                    "🤖 Auto-reply for common questions (24/7)",
-                    "📋 Automatic order taking & confirmation",
+                    "🤖 AI-powered auto-reply for common questions (24/7)",
+                    "📋 Intelligent order taking & confirmation",
                     "💳 Direct payment links in chat",
                     "🗣️ Hindi + English + regional language support",
                     "📊 Customer analytics & insights",
-                    "🎯 Broadcast messages for offers",
+                    "🎯 Smart broadcast messages for offers",
                     "⏰ Schedule messages for festivals/sales",
                     "👥 Handle unlimited customer conversations"
                 ],
@@ -280,32 +274,13 @@ const enhancedKnowledgeBase = {
             }
         ]
     },
-    "ai_initiatives": {
-        keywords: ["ai", "artificial intelligence", "ai-saathi", "kirana ai", "farmer", "agriculture"],
-        responses: [
-            {
-                text: "हमारे AI initiatives are making real impact across India! We're proud of these programs:",
-                features: [
-                    "🌾 AI-Saathi: Voice assistant for 50M+ farmers (weather, prices, farming tips)",
-                    "🏪 Kirana AI: Digitizing 1M+ local shops with smart inventory",
-                    "🎓 AI Skilling Programs: Training 100K+ rural youth",
-                    "🚀 Startup AI Tools: 500+ startups using our AI solutions",
-                    "📱 Voice recognition in 12 Indian languages",
-                    "🤖 Smart chatbots understanding Indian context",
-                    "📊 Predictive analytics for Indian markets",
-                    "💡 Custom AI solutions for MSMEs"
-                ],
-                followUp: "Which AI initiative would benefit your business most? I can explain how to get started!"
-            }
-        ]
-    },
     "pricing_plans": {
         keywords: ["pricing", "cost", "price", "plans", "packages", "budget", "expensive", "cheap"],
         responses: [
             {
-                text: "हमारी pricing बहुत reasonable है! We believe in affordable technology for all:",
+                text: "हमारी AI-enhanced pricing बहुत reasonable है! We believe in affordable technology for all:",
                 features: [
-                    "💰 ₹89/month: Complete online store + payments + SEO",
+                    "💰 ₹89/month: Complete online store + AI features + payments + SEO",
                     "🌐 ₹3,500: Professional 5-page website (one-time)",
                     "📈 ₹999/month: Social media marketing (8+ posts)",
                     "🔍 ₹1,499/month: SEO + content writing + backlinks",
@@ -317,71 +292,216 @@ const enhancedKnowledgeBase = {
                 followUp: "All prices include GST and support. Want a custom quote for multiple services? I can calculate bundle discounts!"
             }
         ]
-    },
-    "success_stories": {
-        keywords: ["success", "case study", "example", "proof", "results", "testimonial"],
-        responses: [
-            {
-                text: "हमारे customers के success stories बहुत inspiring हैं! Here are real examples:",
-                features: [
-                    "🏪 Ramesh's Kirana (Kanpur): Revenue increased from ₹45K to ₹72K/month",
-                    "🍽️ Sharma's Dhaba (Lucknow): 150+ daily online orders, 80% revenue growth",
-                    "👔 CA Priya (Delhi): Client base grew from 50 to 200+ in 6 months",
-                    "🛍️ Fashion Point (Agra): 120% sales increase during lockdown",
-                    "🏭 Gupta Industries (Noida): Saved ₹50K/month with automation",
-                    "🌾 Farmer Suresh (Mathura): 30% more profit selling directly to buyers",
-                    "💡 EduTech Startup (IIT Kanpur): Launched AI platform in 2 weeks"
-                ],
-                followUp: "These are just a few examples! Want to know how businesses similar to yours have succeeded?"
-            }
-        ]
-    },
-    "getting_started": {
-        keywords: ["start", "begin", "setup", "onboard", "process", "how to", "steps"],
-        responses: [
-            {
-                text: "Getting started with Sudarshan AI Labs is बहुत easy! हमारा process very smooth है:",
-                features: [
-                    "📞 Step 1: Free consultation call (15 minutes)",
-                    "📋 Step 2: Choose services based on your business type",
-                    "💳 Step 3: Make payment (UPI/Card/Net banking)",
-                    "🚀 Step 4: We start setup within 2 hours",
-                    "📱 Step 5: Your digital presence goes live",
-                    "🎓 Step 6: Free training session for your team",
-                    "📊 Step 7: Monthly performance reviews",
-                    "🤝 Step 8: Ongoing support & improvements"
-                ],
-                followUp: "Most businesses are live within 24-48 hours! Ready to start? I can connect you with our team right now!"
-            }
-        ]
-    },
-    "competition": {
-        keywords: ["different", "unique", "why choose", "competitor", "better", "advantage"],
-        responses: [
-            {
-                text: "What makes Sudarshan AI Labs special है our deep understanding of Indian market:",
-                features: [
-                    "🇮🇳 100% Indian company understanding local needs",
-                    "💰 Most affordable pricing (starting ₹89 vs competitors' ₹2000+)",
-                    "🗣️ Full support in Hindi & regional languages",
-                    "📱 Mobile-first approach (most Indians use mobile only)",
-                    "🤖 AI solutions specifically for Indian businesses",
-                    "⚡ Fastest setup time (2 minutes vs 2 weeks)",
-                    "🎯 Focus on MSMEs, not just large enterprises",
-                    "💡 Innovative solutions like voice-based farming assistant"
-                ],
-                followUp: "हमारा mission है to democratize technology for every Indian business. What matters most to you in choosing a tech partner?"
-            }
-        ]
     }
 };
+
+// OpenAI Integration Class
+class OpenAIIntegration {
+    constructor() {
+        this.apiKey = this.getStoredApiKey();
+        this.model = localStorage.getItem('leeila_ai_model') || 'gpt-3.5-turbo';
+        this.usageCount = parseInt(localStorage.getItem('leeila_usage_count') || '0');
+        this.lastUsageReset = localStorage.getItem('leeila_usage_reset') || new Date().toDateString();
+        this.maxDailyUsage = 100;
+        this.isConnected = false;
+        
+        this.resetDailyUsageIfNeeded();
+        this.updateUI();
+    }
+    
+    getStoredApiKey() {
+        // Simple encoding for basic protection (not cryptographically secure)
+        const encoded = sessionStorage.getItem('leeila_api_key');
+        return encoded ? atob(encoded) : '';
+    }
+    
+    setApiKey(key) {
+        this.apiKey = key;
+        if (key) {
+            // Simple encoding for basic protection
+            sessionStorage.setItem('leeila_api_key', btoa(key));
+        } else {
+            sessionStorage.removeItem('leeila_api_key');
+        }
+        this.updateUI();
+    }
+    
+    setModel(model) {
+        this.model = model;
+        localStorage.setItem('leeila_ai_model', model);
+    }
+    
+    resetDailyUsageIfNeeded() {
+        const today = new Date().toDateString();
+        if (this.lastUsageReset !== today) {
+            this.usageCount = 0;
+            this.lastUsageReset = today;
+            localStorage.setItem('leeila_usage_count', '0');
+            localStorage.setItem('leeila_usage_reset', today);
+        }
+    }
+    
+    incrementUsage() {
+        this.usageCount++;
+        localStorage.setItem('leeila_usage_count', this.usageCount.toString());
+        this.updateUI();
+    }
+    
+    canMakeRequest() {
+        return this.apiKey && this.usageCount < this.maxDailyUsage;
+    }
+    
+    async testConnection() {
+        if (!this.apiKey) {
+            throw new Error('API key is required');
+        }
+        
+        try {
+            const response = await fetch('https://api.openai.com/v1/models', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${this.apiKey}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                this.isConnected = true;
+                this.updateUI();
+                return { success: true, message: 'Connection successful!' };
+            } else {
+                this.isConnected = false;
+                this.updateUI();
+                throw new Error(`API Error: ${response.status}`);
+            }
+        } catch (error) {
+            this.isConnected = false;
+            this.updateUI();
+            throw error;
+        }
+    }
+    
+    async generateResponse(message, conversationHistory = []) {
+        if (!this.canMakeRequest()) {
+            throw new Error('API key missing or daily limit reached');
+        }
+        
+        const systemPrompt = `You are Leeila, an AI assistant for Sudarshan AI Labs, a company that helps Indian MSMEs with digital transformation. You should:
+
+1. Respond in a mix of Hindi and English (Hinglish) when appropriate
+2. Be helpful, friendly, and culturally aware of Indian business practices
+3. Focus on practical business solutions starting from ₹89
+4. Provide specific, actionable advice
+5. Keep responses concise but informative
+6. Use emojis occasionally to be engaging
+7. Always maintain a professional yet friendly tone
+
+Company context:
+- Services start from ₹89 for online store setup
+- Specializes in AI solutions, websites, marketing, automation
+- Based in Lucknow, serves all of India
+- Focus on MSMEs and offline businesses going digital`;
+
+        const messages = [
+            { role: 'system', content: systemPrompt },
+            ...conversationHistory.slice(-6).map(msg => ({
+                role: msg.type === 'user' ? 'user' : 'assistant',
+                content: msg.content
+            })),
+            { role: 'user', content: message }
+        ];
+        
+        try {
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${this.apiKey}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    model: this.model,
+                    messages: messages,
+                    max_tokens: 500,
+                    temperature: 0.7,
+                    presence_penalty: 0.1,
+                    frequency_penalty: 0.1
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`API Error: ${response.status} - ${response.statusText}`);
+            }
+            
+            const data = await response.json();
+            this.incrementUsage();
+            
+            return {
+                text: data.choices[0].message.content.trim(),
+                followUp: "Need more help? I'm here to assist you with any questions about our services!"
+            };
+        } catch (error) {
+            console.error('OpenAI API Error:', error);
+            throw error;
+        }
+    }
+    
+    updateUI() {
+        const statusIndicator = document.getElementById('apiStatus');
+        const statusDot = statusIndicator?.querySelector('.status-dot');
+        const statusText = statusIndicator?.querySelector('span');
+        const usageIndicator = document.getElementById('usageIndicator');
+        const usageCount = document.getElementById('usageCount');
+        
+        if (statusDot && statusText) {
+            if (this.isConnected && this.apiKey) {
+                statusDot.className = 'status-dot connected';
+                statusText.textContent = 'AI Online';
+            } else if (this.apiKey && !this.isConnected) {
+                statusDot.className = 'status-dot error';
+                statusText.textContent = 'AI Error';
+            } else {
+                statusDot.className = 'status-dot disconnected';
+                statusText.textContent = 'AI Offline';
+            }
+        }
+        
+        if (usageIndicator && usageCount) {
+            if (this.apiKey) {
+                usageIndicator.style.display = 'block';
+                usageCount.textContent = `${this.usageCount}/${this.maxDailyUsage}`;
+            } else {
+                usageIndicator.style.display = 'none';
+            }
+        }
+        
+        // Update settings modal if open
+        const connectionValue = document.getElementById('connectionValue');
+        const usageValue = document.getElementById('usageValue');
+        
+        if (connectionValue) {
+            connectionValue.textContent = this.isConnected ? 'Connected' : 'Disconnected';
+            connectionValue.style.color = this.isConnected ? 'var(--color-accent-green)' : 'var(--color-warm-gray)';
+        }
+        
+        if (usageValue) {
+            usageValue.textContent = `${this.usageCount} requests`;
+        }
+    }
+    
+    clearApiKey() {
+        this.setApiKey('');
+        this.isConnected = false;
+        this.updateUI();
+    }
+}
 
 // Application state
 let currentBusinessType = '';
 let selectedServices = [];
 let conversationHistory = [];
 let isTyping = false;
-let filteredServices = [...servicesData];
+let aiMode = false;
+let openAI = null;
 
 // DOM elements
 let elements = {};
@@ -391,49 +511,142 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeElements();
     setupEventListeners();
     renderServices();
-    displayWelcomeMessage();
+    setupMobileOptimizations();
+    initializeOpenAI();
+    applyGradientTextEnhancements();
+    
+    // Initial greeting enhancement
+    setTimeout(() => {
+        if (conversationHistory.length <= 1) {
+            addAgentMessage({
+                text: "मैं देख रहा हूँ कि आप अभी भी explore कर रहे हैं! Here are some popular questions I can help with:",
+                features: [
+                    "💰 \"What's the best package for my budget?\"",
+                    "🏪 \"How can I digitize my kirana store?\"",
+                    "📱 \"Set up WhatsApp ordering for my restaurant\"",
+                    "🤖 \"Tell me about AI-powered solutions\"",
+                    "⚙️ \"How do I enable AI responses?\""
+                ],
+                followUp: "Just tap on any quick question below or type your own! Enable AI mode in settings for enhanced conversations."
+            });
+        }
+    }, 25000);
 });
+
+// Apply gradient text enhancements dynamically
+function applyGradientTextEnhancements() {
+    // Apply gradient text to dynamically created elements
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeType === 1) { // Element node
+                        applyGradientToElement(node);
+                    }
+                });
+            }
+        });
+    });
+    
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+    
+    // Apply to existing elements
+    applyGradientToElement(document.body);
+}
+
+function applyGradientToElement(element) {
+    // Apply gradient text classes to specific elements
+    const headings = element.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    headings.forEach(heading => {
+        if (!heading.classList.contains('gradient-text-heading')) {
+            heading.classList.add('gradient-text-heading');
+        }
+    });
+    
+    // Apply gradient to service names
+    const serviceNames = element.querySelectorAll('.service-name');
+    serviceNames.forEach(name => {
+        if (!name.classList.contains('gradient-text-heading')) {
+            name.classList.add('gradient-text-heading');
+        }
+    });
+    
+    // Apply gradient to prices
+    const servicePrices = element.querySelectorAll('.service-price');
+    servicePrices.forEach(price => {
+        if (!price.classList.contains('gradient-text-price')) {
+            price.classList.add('gradient-text-price');
+        }
+    });
+    
+    // Apply gradient to action titles
+    const actionTitles = element.querySelectorAll('.action-title');
+    actionTitles.forEach(title => {
+        if (!title.classList.contains('gradient-text-heading')) {
+            title.classList.add('gradient-text-heading');
+        }
+    });
+    
+    // Apply gradient to highlight titles
+    const highlightTitles = element.querySelectorAll('.highlight-title');
+    highlightTitles.forEach(title => {
+        if (!title.classList.contains('gradient-text-heading')) {
+            title.classList.add('gradient-text-heading');
+        }
+    });
+}
+
+// Initialize OpenAI integration
+function initializeOpenAI() {
+    openAI = new OpenAIIntegration();
+    
+    // Check if AI mode was previously enabled
+    const savedAiMode = localStorage.getItem('leeila_ai_mode') === 'true';
+    const aiModeToggle = document.getElementById('aiModeToggle');
+    if (aiModeToggle) {
+        aiModeToggle.checked = savedAiMode;
+        aiMode = savedAiMode;
+    }
+}
 
 // Initialize DOM elements
 function initializeElements() {
     elements = {
-        businessType: document.getElementById('businessType'),
-        servicesContainer: document.getElementById('servicesContainer'),
+        // Chat elements
         chatMessages: document.getElementById('chatMessages'),
         messageInput: document.getElementById('messageInput'),
         sendButton: document.getElementById('sendButton'),
         typingIndicator: document.getElementById('typingIndicator'),
+        aiModeToggle: document.getElementById('aiModeToggle'),
+        
+        // Services
+        servicesContainer: document.getElementById('servicesContainer'),
         
         // Modals
-        comparisonModal: document.getElementById('comparisonModal'),
+        settingsModal: document.getElementById('settingsModal'),
         quoteModal: document.getElementById('quoteModal'),
         contactModal: document.getElementById('contactModal'),
         successModal: document.getElementById('successModal'),
         
         // Modal content areas
-        comparisonContent: document.getElementById('comparisonContent'),
         quoteServices: document.getElementById('quoteServices'),
         quoteTotal: document.getElementById('quoteTotal'),
-        contactServices: document.getElementById('contactServices'),
-        successContent: document.getElementById('successContent')
+        successContent: document.getElementById('successContent'),
+        
+        // Settings elements
+        apiKeyInput: document.getElementById('apiKeyInput'),
+        modelSelect: document.getElementById('modelSelect'),
+        toggleApiKey: document.getElementById('toggleApiKey'),
+        testConnectionBtn: document.getElementById('testConnectionBtn'),
+        clearApiKeyBtn: document.getElementById('clearApiKeyBtn')
     };
 }
 
 // Setup event listeners
 function setupEventListeners() {
-    // Business type selector
-    elements.businessType.addEventListener('change', handleBusinessTypeChange);
-    
-    // Category filters
-    document.querySelectorAll('.category-btn').forEach(btn => {
-        btn.addEventListener('click', handleCategoryFilter);
-    });
-    
-    // Price filters
-    document.querySelectorAll('.price-options input').forEach(checkbox => {
-        checkbox.addEventListener('change', handlePriceFilter);
-    });
-    
     // Chat functionality
     elements.sendButton.addEventListener('click', handleSendMessage);
     elements.messageInput.addEventListener('keypress', function(e) {
@@ -443,6 +656,26 @@ function setupEventListeners() {
         }
     });
     
+    // AI Mode Toggle
+    if (elements.aiModeToggle) {
+        elements.aiModeToggle.addEventListener('change', function() {
+            aiMode = this.checked;
+            localStorage.setItem('leeila_ai_mode', aiMode.toString());
+            
+            const message = aiMode ? 
+                "🤖 AI-powered responses enabled! I can now provide more intelligent and personalized answers." :
+                "📝 Switched to quick responses mode. Enable AI mode for enhanced conversations.";
+            
+            showSuccessMessage(message);
+        });
+    }
+    
+    // Settings functionality
+    const settingsBtn = document.getElementById('settingsBtn');
+    if (settingsBtn) {
+        settingsBtn.addEventListener('click', openSettingsModal);
+    }
+    
     // Quick question buttons
     document.querySelectorAll('.quick-btn').forEach(btn => {
         btn.addEventListener('click', function() {
@@ -451,129 +684,275 @@ function setupEventListeners() {
         });
     });
     
+    // Business type buttons
+    document.querySelectorAll('.business-type-btn').forEach(btn => {
+        btn.addEventListener('click', handleBusinessTypeSelection);
+    });
+    
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', handleServiceFilter);
+    });
+    
+    // Action buttons
+    const quickQuoteBtn = document.getElementById('quickQuoteBtn');
+    if (quickQuoteBtn) {
+        quickQuoteBtn.addEventListener('click', openQuoteModal);
+    }
+    
+    const businessTypeBtnAction = document.getElementById('businessTypeBtnAction');
+    if (businessTypeBtnAction) {
+        businessTypeBtnAction.addEventListener('click', openBusinessSelector);
+    }
+    
+    const consultationBtn = document.getElementById('consultationBtn');
+    if (consultationBtn) {
+        consultationBtn.addEventListener('click', openContactModal);
+    }
+    
     // Modal controls
     setupModalControls();
-    
-    // Quote calculator
-    document.getElementById('quickQuoteBtn').addEventListener('click', openQuoteModal);
-    
-    // View toggle
-    document.querySelectorAll('.view-btn').forEach(btn => {
-        btn.addEventListener('click', handleViewToggle);
-    });
+    setupSettingsModalControls();
     
     // Input updates
     elements.messageInput.addEventListener('input', updateSendButtonState);
     updateSendButtonState();
 }
 
-// Setup modal controls
-function setupModalControls() {
-    // Comparison modal
-    document.getElementById('comparisonClose').addEventListener('click', () => closeModal('comparisonModal'));
-    document.getElementById('comparisonBackdrop').addEventListener('click', () => closeModal('comparisonModal'));
+// Setup settings modal controls
+function setupSettingsModalControls() {
+    // Settings modal controls
+    const settingsClose = document.getElementById('settingsClose');
+    const settingsBackdrop = document.getElementById('settingsBackdrop');
     
-    // Quote modal
-    document.getElementById('quoteClose').addEventListener('click', () => closeModal('quoteModal'));
-    document.getElementById('quoteBackdrop').addEventListener('click', () => closeModal('quoteModal'));
-    document.getElementById('requestQuoteBtn').addEventListener('click', handleQuoteRequest);
+    if (settingsClose) {
+        settingsClose.addEventListener('click', () => closeModal('settingsModal'));
+    }
+    if (settingsBackdrop) {
+        settingsBackdrop.addEventListener('click', () => closeModal('settingsModal'));
+    }
     
-    // Contact modal
-    document.getElementById('contactClose').addEventListener('click', () => closeModal('contactModal'));
-    document.getElementById('contactBackdrop').addEventListener('click', () => closeModal('contactModal'));
-    document.getElementById('submitContactBtn').addEventListener('click', handleContactSubmit);
-    
-    // Success modal
-    document.getElementById('successClose').addEventListener('click', () => closeModal('successModal'));
-    document.getElementById('successBackdrop').addEventListener('click', () => closeModal('successModal'));
-}
-
-// Handle business type change
-function handleBusinessTypeChange(e) {
-    currentBusinessType = e.target.value;
-    if (currentBusinessType) {
-        const recommendation = businessRecommendations[currentBusinessType];
-        addAgentMessage({
-            text: `Perfect! ${recommendation.emoji} For a ${recommendation.name}, I recommend these services:`,
-            features: recommendation.recommended.map(service => {
-                const serviceData = servicesData.find(s => s.name === service);
-                return `${serviceData.name} - ${serviceData.price}`;
-            }),
-            followUp: `${recommendation.benefits}. Success story: ${recommendation.story}`
+    // API key input
+    if (elements.apiKeyInput && openAI) {
+        elements.apiKeyInput.value = openAI.apiKey;
+        elements.apiKeyInput.addEventListener('input', function() {
+            openAI.setApiKey(this.value.trim());
         });
-        
-        // Filter services based on recommendation
-        highlightRecommendedServices(recommendation.recommended);
+    }
+    
+    // Model selection
+    if (elements.modelSelect && openAI) {
+        elements.modelSelect.value = openAI.model;
+        elements.modelSelect.addEventListener('change', function() {
+            openAI.setModel(this.value);
+        });
+    }
+    
+    // Toggle API key visibility
+    if (elements.toggleApiKey) {
+        elements.toggleApiKey.addEventListener('click', function() {
+            const input = elements.apiKeyInput;
+            if (input.type === 'password') {
+                input.type = 'text';
+                this.textContent = '🙈';
+            } else {
+                input.type = 'password';
+                this.textContent = '👁️';
+            }
+        });
+    }
+    
+    // Test connection
+    if (elements.testConnectionBtn) {
+        elements.testConnectionBtn.addEventListener('click', async function() {
+            if (!openAI.apiKey) {
+                showErrorMessage('Please enter your OpenAI API key first');
+                return;
+            }
+            
+            this.disabled = true;
+            this.textContent = '🔄 Testing...';
+            
+            try {
+                const result = await openAI.testConnection();
+                showSuccessMessage(result.message);
+                this.textContent = '✅ Connected';
+                setTimeout(() => {
+                    this.textContent = '🔌 Test Connection';
+                    this.disabled = false;
+                }, 2000);
+            } catch (error) {
+                showErrorMessage(`Connection failed: ${error.message}`);
+                this.textContent = '❌ Failed';
+                setTimeout(() => {
+                    this.textContent = '🔌 Test Connection';
+                    this.disabled = false;
+                }, 2000);
+            }
+        });
+    }
+    
+    // Clear API key
+    if (elements.clearApiKeyBtn) {
+        elements.clearApiKeyBtn.addEventListener('click', function() {
+            if (confirm('Are you sure you want to clear your API key? This will disable AI-powered responses.')) {
+                openAI.clearApiKey();
+                elements.apiKeyInput.value = '';
+                showSuccessMessage('API key cleared successfully');
+            }
+        });
     }
 }
 
-// Highlight recommended services
-function highlightRecommendedServices(recommended) {
-    document.querySelectorAll('.service-card').forEach(card => {
-        const serviceName = card.querySelector('.service-name').textContent;
-        if (recommended.includes(serviceName)) {
-            card.classList.add('recommended');
-            card.style.border = '2px solid var(--color-primary)';
-            card.style.background = 'linear-gradient(135deg, var(--color-bg-1), var(--color-bg-3))';
-        } else {
-            card.classList.remove('recommended');
-            card.style.border = '';
-            card.style.background = '';
+// Setup modal controls
+function setupModalControls() {
+    // Quote modal
+    const quoteClose = document.getElementById('quoteClose');
+    const quoteBackdrop = document.getElementById('quoteBackdrop');
+    const requestQuoteBtn = document.getElementById('requestQuoteBtn');
+    
+    if (quoteClose) quoteClose.addEventListener('click', () => closeModal('quoteModal'));
+    if (quoteBackdrop) quoteBackdrop.addEventListener('click', () => closeModal('quoteModal'));
+    if (requestQuoteBtn) requestQuoteBtn.addEventListener('click', handleQuoteRequest);
+    
+    // Contact modal
+    const contactClose = document.getElementById('contactClose');
+    const contactBackdrop = document.getElementById('contactBackdrop');
+    const submitContactBtn = document.getElementById('submitContactBtn');
+    
+    if (contactClose) contactClose.addEventListener('click', () => closeModal('contactModal'));
+    if (contactBackdrop) contactBackdrop.addEventListener('click', () => closeModal('contactModal'));
+    if (submitContactBtn) submitContactBtn.addEventListener('click', handleContactSubmit);
+    
+    // Success modal
+    const successClose = document.getElementById('successClose');
+    const successBackdrop = document.getElementById('successBackdrop');
+    
+    if (successClose) successClose.addEventListener('click', () => closeModal('successModal'));
+    if (successBackdrop) successBackdrop.addEventListener('click', () => closeModal('successModal'));
+}
+
+// Setup mobile optimizations
+function setupMobileOptimizations() {
+    // Prevent zoom on input focus for iOS
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        const viewport = document.querySelector('meta[name=viewport]');
+        if (viewport) {
+            viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
         }
+    }
+    
+    // Handle virtual keyboard on mobile
+    let initialViewportHeight = window.innerHeight;
+    window.addEventListener('resize', function() {
+        const currentHeight = window.innerHeight;
+        const heightDiff = initialViewportHeight - currentHeight;
+        
+        if (heightDiff > 150) { // Virtual keyboard likely open
+            document.body.style.paddingBottom = '0px';
+        } else {
+            document.body.style.paddingBottom = '';
+        }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
 }
 
-// Handle category filtering
-function handleCategoryFilter(e) {
-    document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+// Handle business type selection
+function handleBusinessTypeSelection(e) {
+    // Remove active class from all buttons
+    document.querySelectorAll('.business-type-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Add active class to clicked button
     e.target.classList.add('active');
     
-    const category = e.target.getAttribute('data-category');
-    if (category === 'all') {
-        filteredServices = [...servicesData];
-    } else {
-        filteredServices = servicesData.filter(service => service.category === category);
-    }
+    const businessType = e.target.getAttribute('data-type');
+    currentBusinessType = businessType;
     
-    renderServices();
+    if (businessRecommendations[businessType]) {
+        const recommendation = businessRecommendations[businessType];
+        sendBusinessRecommendation(recommendation);
+    }
 }
 
-// Handle price filtering
-function handlePriceFilter() {
-    const selectedPrices = Array.from(document.querySelectorAll('.price-options input:checked'))
-        .map(input => input.value);
+// Send business recommendation
+function sendBusinessRecommendation(recommendation) {
+    const message = `Perfect choice! ${recommendation.emoji} For a ${recommendation.name}, I recommend these services:`;
+    const features = recommendation.recommended.map(service => {
+        const serviceData = servicesData.find(s => s.name === service);
+        return `${serviceData.name} - ${serviceData.price}`;
+    });
     
-    if (selectedPrices.length === 0) {
-        filteredServices = [];
-    } else {
-        filteredServices = servicesData.filter(service => 
-            selectedPrices.includes(service.priceCategory)
-        );
-    }
-    
-    renderServices();
+    addAgentMessage({
+        text: message,
+        features: features,
+        followUp: `${recommendation.benefits}. Success story: ${recommendation.story}`
+    });
 }
 
-// Handle view toggle
-function handleViewToggle(e) {
-    document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
+// Handle service filtering
+function handleServiceFilter(e) {
+    // Remove active class from all filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Add active class to clicked button
     e.target.classList.add('active');
     
-    const view = e.target.getAttribute('data-view');
-    elements.servicesContainer.className = view === 'list' ? 'services-container list' : 'services-container';
+    const filter = e.target.getAttribute('data-filter');
+    filterServices(filter);
+}
+
+// Filter services
+function filterServices(filter) {
+    let filteredServices = [...servicesData];
+    
+    switch (filter) {
+        case 'budget':
+            filteredServices = servicesData.filter(service => service.priceCategory === 'budget');
+            break;
+        case 'popular':
+            filteredServices = servicesData.filter(service => 
+                service.popularity === 'high' || service.popularity === 'very-high'
+            );
+            break;
+        case 'all':
+        default:
+            filteredServices = [...servicesData];
+            break;
+    }
+    
+    renderServices(filteredServices);
 }
 
 // Render services
-function renderServices() {
+function renderServices(services = servicesData) {
+    if (!elements.servicesContainer) return;
+    
     elements.servicesContainer.innerHTML = '';
     
-    filteredServices.forEach(service => {
+    services.forEach(service => {
         const serviceCard = createServiceCard(service);
         elements.servicesContainer.appendChild(serviceCard);
     });
     
-    // Populate contact services checkboxes
-    populateContactServices();
+    // Apply gradient text to newly created service cards
+    setTimeout(() => applyGradientToElement(elements.servicesContainer), 100);
 }
 
 // Create service card
@@ -581,68 +960,26 @@ function createServiceCard(service) {
     const card = document.createElement('div');
     card.className = 'service-card';
     
-    const featuresHtml = service.features.map(feature => `<li>${feature}</li>`).join('');
     const isMonthly = service.monthlyFeature ? '/month' : '';
-    const originalPrice = service.originalPrice ? `<span style="text-decoration: line-through; color: var(--color-text-secondary); font-size: var(--font-size-sm);">${service.originalPrice}</span>` : '';
+    const originalPrice = service.originalPrice ? 
+        `<span style="text-decoration: line-through; color: var(--color-text-secondary); font-size: var(--font-size-sm);">${service.originalPrice}</span>` : '';
     
     card.innerHTML = `
         <div class="service-header">
-            <h3 class="service-name">${service.name}</h3>
-            <div class="service-price">
+            <h3 class="service-name gradient-text-heading">${service.name}</h3>
+            <div class="service-price gradient-text-price">
                 ${originalPrice}
                 ${service.price}${isMonthly}
             </div>
         </div>
-        <div class="service-category">${service.category}</div>
-        <p class="service-description">${service.description}</p>
-        <ul class="service-features">
-            ${featuresHtml}
-        </ul>
-        <div class="service-ideal">
-            <strong>Ideal for:</strong> ${service.idealFor}
-        </div>
+        <p class="service-description gradient-text-accent">${service.description}</p>
         <div class="service-actions">
             <button class="btn btn--primary" onclick="addToQuote('${service.name}')">Add to Quote</button>
-            <button class="btn btn--outline" onclick="askAboutService('${service.name}')">Ask AI</button>
+            <button class="btn btn--outline" onclick="askAboutService('${service.name}')">Ask Leeila</button>
         </div>
     `;
     
     return card;
-}
-
-// Add service to quote
-function addToQuote(serviceName) {
-    if (!selectedServices.includes(serviceName)) {
-        selectedServices.push(serviceName);
-        showSuccessMessage(`${serviceName} added to your quote! 🎉`);
-        
-        // Add celebration animation
-        const serviceCard = Array.from(document.querySelectorAll('.service-card'))
-            .find(card => card.querySelector('.service-name').textContent === serviceName);
-        
-        if (serviceCard) {
-            serviceCard.classList.add('celebration');
-            setTimeout(() => serviceCard.classList.remove('celebration'), 600);
-        }
-    } else {
-        showSuccessMessage(`${serviceName} is already in your quote!`);
-    }
-}
-
-// Ask about service
-function askAboutService(serviceName) {
-    const query = `Tell me more about ${serviceName} and how it can help my business`;
-    sendUserMessage(query);
-}
-
-// Display welcome message
-function displayWelcomeMessage() {
-    // Welcome message is already in HTML
-    conversationHistory.push({
-        type: 'agent',
-        content: 'Welcome message displayed',
-        timestamp: new Date()
-    });
 }
 
 // Handle sending message
@@ -667,15 +1004,48 @@ function sendUserMessage(message) {
     updateSendButtonState();
     
     showTypingIndicator();
-    setTimeout(() => {
-        const response = generateAIResponse(message);
-        hideTypingIndicator();
-        addAgentMessage(response);
-    }, 1500 + Math.random() * 1000);
+    
+    // Determine response method
+    if (aiMode && openAI && openAI.canMakeRequest()) {
+        generateAIResponse(message);
+    } else {
+        setTimeout(() => {
+            const response = generateFallbackResponse(message);
+            hideTypingIndicator();
+            addAgentMessage(response);
+        }, 1000 + Math.random() * 1000);
+    }
 }
 
-// Generate AI response
-function generateAIResponse(userMessage) {
+// Generate AI response using OpenAI
+async function generateAIResponse(message) {
+    try {
+        const response = await openAI.generateResponse(message, conversationHistory);
+        hideTypingIndicator();
+        addAgentMessage(response);
+    } catch (error) {
+        console.error('AI Response Error:', error);
+        hideTypingIndicator();
+        
+        // Fallback to pre-programmed response
+        const fallbackResponse = generateFallbackResponse(message);
+        addAgentMessage({
+            text: "🤖 AI response unavailable, using quick response mode. " + fallbackResponse.text,
+            features: fallbackResponse.features,
+            followUp: fallbackResponse.followUp + " (Enable AI in settings for enhanced responses)"
+        });
+        
+        // Show error notification
+        if (error.message.includes('daily limit')) {
+            showErrorMessage('Daily AI usage limit reached. Using quick responses.');
+        } else if (error.message.includes('API key')) {
+            showErrorMessage('Please configure your OpenAI API key in settings.');
+        }
+    }
+}
+
+// Generate fallback response (pre-programmed)
+function generateFallbackResponse(userMessage) {
     const message = userMessage.toLowerCase();
     
     // Check for specific service inquiries
@@ -705,23 +1075,23 @@ function generateAIResponse(userMessage) {
                 const serviceData = servicesData.find(s => s.name === service);
                 return `${serviceData.name} - ${serviceData.description}`;
             }),
-            followUp: "Would you like detailed information about any of these services?"
+            followUp: "Would you like detailed information about any of these services? Enable AI mode in settings for more personalized responses!"
         };
     }
     
     // Default responses with Indian touch
     const defaultResponses = [
         {
-            text: "Namastey! 🙏 That's an interesting question. मैं आपकी हर तरह से help करने के लिए यहाँ हूँ।",
-            followUp: "You can ask me about our services, pricing, success stories, or get recommendations for your business type!"
+            text: "Namastey! 🙏 That's an interesting question. मैं Leeila, आपकी हर तरह से help करने के लिए यहाँ हूँ।",
+            followUp: "You can ask me about our services, pricing, success stories, or get recommendations for your business type! Enable AI mode in settings for enhanced conversations."
         },
         {
-            text: "Great question! हमारे पास बहुत सारे solutions हैं Indian businesses के लिए।",
-            followUp: "Tell me about your business type or specific challenges, and I'll provide personalized recommendations!"
+            text: "Great question! हमारे पास बहुत सारे AI-powered solutions हैं Indian businesses के लिए।",
+            followUp: "Tell me about your business type or specific challenges, and I'll provide personalized recommendations! Try enabling AI mode for smarter responses."
         },
         {
-            text: "मुझे खुशी होगी आपकी मदद करने में! Our platform is designed specifically for Indian MSMEs.",
-            followUp: "Ask me about our ₹89 signature package, AI solutions, or any specific service you're interested in!"
+            text: "मुझे खुशी होगी आपकी मदद करने में! Our platform is designed specifically for Indian MSMEs with advanced AI capabilities.",
+            followUp: "Ask me about our ₹89 signature package, AI solutions, or any specific service you're interested in! Configure AI settings for more intelligent responses."
         }
     ];
     
@@ -751,6 +1121,8 @@ function generateServiceResponse(service, userMessage) {
 
 // Add message to chat
 function addMessageToChat(type, content, features = null, followUp = null) {
+    if (!elements.chatMessages) return;
+    
     const messageElement = document.createElement('div');
     messageElement.className = `message ${type}-message`;
     
@@ -761,7 +1133,9 @@ function addMessageToChat(type, content, features = null, followUp = null) {
     
     let featuresHtml = '';
     if (features && features.length > 0) {
-        featuresHtml = '<ul>' + features.map(feature => `<li>${feature}</li>`).join('') + '</ul>';
+        featuresHtml = '<ul style="margin: 8px 0; padding-left: 20px;">' + 
+            features.map(feature => `<li style="margin-bottom: 4px; font-weight: 500;">${feature}</li>`).join('') + 
+            '</ul>';
     }
     
     let followUpHtml = '';
@@ -785,6 +1159,9 @@ function addMessageToChat(type, content, features = null, followUp = null) {
     
     elements.chatMessages.appendChild(messageElement);
     scrollToBottom();
+    
+    // Apply gradient text to the new message
+    setTimeout(() => applyGradientToElement(messageElement), 100);
 }
 
 // Add agent message
@@ -798,87 +1175,138 @@ function addAgentMessage(response) {
         followUp: response.followUp,
         timestamp: new Date()
     });
-    
-    // Handle special actions
-    if (response.action) {
-        setTimeout(() => handleResponseAction(response.action), 1000);
-    }
-}
-
-// Handle response actions
-function handleResponseAction(action) {
-    switch (action) {
-        case 'openQuote':
-            openQuoteModal();
-            break;
-        case 'openContact':
-            openContactModal();
-            break;
-        case 'openComparison':
-            openComparisonModal();
-            break;
-    }
 }
 
 // Show/hide typing indicator
 function showTypingIndicator() {
     isTyping = true;
-    elements.typingIndicator.style.display = 'block';
+    if (elements.typingIndicator) {
+        elements.typingIndicator.style.display = 'block';
+    }
     elements.sendButton.disabled = true;
     scrollToBottom();
 }
 
 function hideTypingIndicator() {
     isTyping = false;
-    elements.typingIndicator.style.display = 'none';
+    if (elements.typingIndicator) {
+        elements.typingIndicator.style.display = 'none';
+    }
     elements.sendButton.disabled = false;
     updateSendButtonState();
 }
 
 // Scroll to bottom
 function scrollToBottom() {
-    setTimeout(() => {
-        elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
-    }, 100);
+    if (elements.chatMessages) {
+        setTimeout(() => {
+            elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
+        }, 100);
+    }
 }
 
 // Update send button state
 function updateSendButtonState() {
+    if (!elements.messageInput || !elements.sendButton) return;
+    
     const hasContent = elements.messageInput.value.trim().length > 0;
     elements.sendButton.disabled = !hasContent || isTyping;
     elements.sendButton.style.opacity = hasContent && !isTyping ? '1' : '0.6';
 }
 
+// Open settings modal
+function openSettingsModal() {
+    if (!elements.settingsModal) return;
+    
+    elements.settingsModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    
+    // Update UI with current values
+    if (openAI) {
+        if (elements.apiKeyInput) elements.apiKeyInput.value = openAI.apiKey;
+        if (elements.modelSelect) elements.modelSelect.value = openAI.model;
+        openAI.updateUI();
+    }
+}
+
+// Open business selector
+function openBusinessSelector() {
+    const businessSelector = document.querySelector('.business-selector-section');
+    if (businessSelector) {
+        businessSelector.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+        
+        // Send a helpful message
+        addAgentMessage({
+            text: "Great! Let me help you find the perfect services for your business type. Please select your business category below:",
+            followUp: "Once you select your business type, I'll provide personalized recommendations!"
+        });
+    }
+}
+
+// Add service to quote
+function addToQuote(serviceName) {
+    if (!selectedServices.includes(serviceName)) {
+        selectedServices.push(serviceName);
+        showSuccessMessage(`${serviceName} added to your quote! 🎉`);
+        
+        // Add celebration animation
+        const serviceCard = Array.from(document.querySelectorAll('.service-card'))
+            .find(card => card.querySelector('.service-name').textContent === serviceName);
+        
+        if (serviceCard) {
+            serviceCard.classList.add('celebration');
+            setTimeout(() => serviceCard.classList.remove('celebration'), 800);
+        }
+    } else {
+        showSuccessMessage(`${serviceName} is already in your quote!`);
+    }
+}
+
+// Ask about service
+function askAboutService(serviceName) {
+    const query = `Tell me more about ${serviceName} and how it can help my business`;
+    sendUserMessage(query);
+}
+
 // Quote Modal Functions
 function openQuoteModal() {
     populateQuoteServices();
-    elements.quoteModal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
+    if (elements.quoteModal) {
+        elements.quoteModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
 }
 
 function populateQuoteServices() {
+    if (!elements.quoteServices) return;
+    
     elements.quoteServices.innerHTML = '';
     
     servicesData.forEach(service => {
         const serviceDiv = document.createElement('div');
         serviceDiv.className = 'quote-service';
         
-        const basePrice = parseInt(service.price.replace(/[^\d]/g, ''));
         const isSelected = selectedServices.includes(service.name);
         
         serviceDiv.innerHTML = `
             <input type="checkbox" id="quote-${service.name}" ${isSelected ? 'checked' : ''} onchange="updateQuoteTotal()">
             <div class="quote-service-info">
-                <div class="quote-service-name">${service.name}</div>
-                <div class="quote-service-desc">${service.description}</div>
+                <div class="quote-service-name gradient-text-heading">${service.name}</div>
+                <div class="quote-service-desc gradient-text-accent">${service.description}</div>
             </div>
-            <div class="quote-service-price">${service.price}</div>
+            <div class="quote-service-price gradient-text-price">${service.price}</div>
         `;
         
         elements.quoteServices.appendChild(serviceDiv);
     });
     
     updateQuoteTotal();
+    
+    // Apply gradient text to quote services
+    setTimeout(() => applyGradientToElement(elements.quoteServices), 100);
 }
 
 function updateQuoteTotal() {
@@ -892,16 +1320,22 @@ function updateQuoteTotal() {
         total += price;
     });
     
-    elements.quoteTotal.textContent = `₹${total.toLocaleString('en-IN')}`;
+    if (elements.quoteTotal) {
+        elements.quoteTotal.textContent = `₹${total.toLocaleString('en-IN')}`;
+    }
     
     // Show bundle savings if multiple services selected
     if (checkedServices.length >= 3) {
         const savings = Math.floor(total * 0.15);
-        document.getElementById('quoteSavings').style.display = 'block';
-        document.getElementById('savingsAmount').textContent = `₹${savings.toLocaleString('en-IN')}`;
-        elements.quoteTotal.textContent = `₹${(total - savings).toLocaleString('en-IN')}`;
+        const quoteSavings = document.getElementById('quoteSavings');
+        const savingsAmount = document.getElementById('savingsAmount');
+        
+        if (quoteSavings) quoteSavings.style.display = 'block';
+        if (savingsAmount) savingsAmount.textContent = `₹${savings.toLocaleString('en-IN')}`;
+        if (elements.quoteTotal) elements.quoteTotal.textContent = `₹${(total - savings).toLocaleString('en-IN')}`;
     } else {
-        document.getElementById('quoteSavings').style.display = 'none';
+        const quoteSavings = document.getElementById('quoteSavings');
+        if (quoteSavings) quoteSavings.style.display = 'none';
     }
 }
 
@@ -914,8 +1348,8 @@ function handleQuoteRequest() {
         return;
     }
     
-    const total = elements.quoteTotal.textContent;
-    const message = `Namastey! I'm interested in these services from Sudarshan AI Labs:\n\n${checkedServices.map((service, index) => `${index + 1}. ${service}`).join('\n')}\n\nTotal: ${total}\n\nPlease provide detailed quote and setup timeline.`;
+    const total = elements.quoteTotal ? elements.quoteTotal.textContent : '₹0';
+    const message = `Namastey! I'm interested in these services from Sudarshan AI Labs (via Leeila AI Agent):\n\n${checkedServices.map((service, index) => `${index + 1}. ${service}`).join('\n')}\n\nTotal: ${total}\n\nPlease provide detailed quote and setup timeline.`;
     
     const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -926,70 +1360,66 @@ function handleQuoteRequest() {
 
 // Contact Modal Functions
 function openContactModal() {
-    populateContactServices();
-    elements.contactModal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-}
-
-function populateContactServices() {
-    elements.contactServices.innerHTML = '';
-    
-    const categories = [...new Set(servicesData.map(s => s.category))];
-    categories.forEach(category => {
-        const label = document.createElement('label');
-        label.innerHTML = `
-            <input type="checkbox" value="${category}">
-            ${category}
-        `;
-        elements.contactServices.appendChild(label);
-    });
+    if (elements.contactModal) {
+        elements.contactModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
 }
 
 function handleContactSubmit() {
-    const name = document.getElementById('contactName').value.trim();
-    const business = document.getElementById('contactBusiness').value.trim();
-    const phone = document.getElementById('contactPhone').value.trim();
-    const businessType = document.getElementById('contactBusinessType').value;
+    const name = document.getElementById('contactName')?.value.trim();
+    const business = document.getElementById('contactBusiness')?.value.trim();
+    const phone = document.getElementById('contactPhone')?.value.trim();
+    const businessType = document.getElementById('contactBusinessType')?.value;
     
     if (!name || !business || !phone) {
         alert('कृपया सभी required fields भरें।');
         return;
     }
     
-    const selectedCategories = Array.from(document.querySelectorAll('#contactServices input:checked'))
-        .map(cb => cb.value);
-    
     // Show success
     closeModal('contactModal');
     
-    elements.successContent.innerHTML = `
-        <div style="text-align: center; padding: 20px;">
-            <div style="font-size: 48px; margin-bottom: 20px;">🎉</div>
-            <h4 style="color: var(--color-success); margin-bottom: 16px;">धन्यवाद ${name}!</h4>
-            <p style="margin-bottom: 20px;">
-                We've received your consultation request for <strong>${business}</strong>.
-            </p>
-            <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: 20px;">
-                📞 Our expert will call you at ${phone} within 2 hours<br>
-                📧 Detailed proposal will be emailed within 24 hours<br>
-                💰 Free SEO audit included with consultation
-            </p>
-            <div style="background: var(--color-bg-3); padding: 16px; border-radius: 8px;">
-                <strong>Next Steps:</strong><br>
-                1. Consultation call (15-30 minutes)<br>
-                2. Custom proposal with pricing<br>
-                3. Free trial/demo if applicable<br>
-                4. Fast-track setup once approved
+    if (elements.successContent) {
+        elements.successContent.innerHTML = `
+            <div style="text-align: center; padding: 20px;">
+                <div style="font-size: 48px; margin-bottom: 20px;">🎉</div>
+                <h4 class="gradient-text-heading" style="color: var(--color-accent-green); margin-bottom: 16px;">धन्यवाद ${name}!</h4>
+                <p style="margin-bottom: 20px; font-weight: 600;" class="gradient-text-chat">
+                    We've received your consultation request for <strong>${business}</strong>.
+                </p>
+                <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: 20px; font-weight: 500;" class="gradient-text-accent">
+                    📞 Our expert will call you at ${phone} within 2 hours<br>
+                    📧 Detailed proposal will be emailed within 24 hours<br>
+                    💰 Free SEO audit included with consultation<br>
+                    🤖 AI-powered recommendations by Leeila
+                </p>
+                <div style="background: linear-gradient(135deg, var(--color-accent-green), var(--color-primary-blue)); color: white; padding: 16px; border-radius: 8px;">
+                    <strong>Next Steps:</strong><br>
+                    1. Consultation call (15-30 minutes)<br>
+                    2. Custom proposal with AI insights<br>
+                    3. Free trial/demo if applicable<br>
+                    4. Fast-track setup once approved
+                </div>
             </div>
-        </div>
-    `;
+        `;
+    }
     
-    elements.successModal.classList.remove('hidden');
+    if (elements.successModal) {
+        elements.successModal.classList.remove('hidden');
+    }
+    
+    // Apply gradient text to success content
+    setTimeout(() => {
+        if (elements.successContent) {
+            applyGradientToElement(elements.successContent);
+        }
+    }, 100);
     
     // Add success message to chat
     setTimeout(() => {
         addAgentMessage({
-            text: `Excellent! I've scheduled your consultation call, ${name}. हमारी team आपसे 2 hours में contact करेगी।`,
+            text: `Excellent! I've scheduled your consultation call, ${name}. हमारी team आपसे 2 hours में contact करेगी with AI-powered business insights।`,
             followUp: "While you wait, feel free to ask me any other questions about our services!"
         });
     }, 1000);
@@ -997,49 +1427,56 @@ function handleContactSubmit() {
 
 // Modal utility functions
 function closeModal(modalId) {
-    document.getElementById(modalId).classList.add('hidden');
-    document.body.style.overflow = 'auto';
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
 }
 
 function showSuccessMessage(message) {
-    // Create temporary success notification
+    createNotification(message, 'success');
+}
+
+function showErrorMessage(message) {
+    createNotification(message, 'error');
+}
+
+function createNotification(message, type = 'success') {
     const notification = document.createElement('div');
+    const bgColor = type === 'success' ? 
+        'linear-gradient(135deg, var(--color-accent-green), var(--color-primary-blue))' :
+        'linear-gradient(135deg, var(--color-ai-error), var(--color-accent-gold))';
+    
     notification.style = `
         position: fixed;
-        top: 100px;
-        right: 20px;
-        background: linear-gradient(135deg, var(--color-success), var(--color-teal-400));
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: ${bgColor};
         color: white;
-        padding: 16px 20px;
-        border-radius: 8px;
-        box-shadow: var(--shadow-lg);
+        padding: 12px 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         z-index: 1001;
-        animation: slideInRight 0.3s ease;
-        max-width: 300px;
+        animation: slideInDown 0.4s ease;
+        max-width: 90%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     `;
     notification.textContent = message;
     
     document.body.appendChild(notification);
     
     setTimeout(() => {
-        notification.style.animation = 'slideOutRight 0.3s ease forwards';
-        setTimeout(() => notification.remove(), 300);
-    }, 3000);
+        notification.style.animation = 'slideOutUp 0.4s ease forwards';
+        setTimeout(() => notification.remove(), 400);
+    }, 4000);
 }
-
-// Add CSS for notification animations
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideInRight {
-        from { transform: translateX(100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-    }
-    @keyframes slideOutRight {
-        from { transform: translateX(0); opacity: 1; }
-        to { transform: translateX(100%); opacity: 0; }
-    }
-`;
-document.head.appendChild(style);
 
 // Keyboard shortcuts
 document.addEventListener('keydown', function(e) {
@@ -1051,34 +1488,61 @@ document.addEventListener('keydown', function(e) {
         document.body.style.overflow = 'auto';
     }
     
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    // Settings shortcut
+    if (e.ctrlKey && e.key === ',') {
         e.preventDefault();
-        elements.messageInput.focus();
+        openSettingsModal();
     }
 });
 
-// Initialize with some engaging interactions
-setTimeout(() => {
-    if (conversationHistory.length <= 1) {
-        addAgentMessage({
-            text: "मैं देख रहा हूँ कि आप अभी भी explore कर रहे हैं! Here are some popular questions I can help with:",
-            features: [
-                "💰 \"What's the best package for my budget?\"",
-                "🏪 \"How can I digitize my kirana store?\"",
-                "📱 \"Set up WhatsApp ordering for my restaurant\"",
-                "🤖 \"Tell me about AI solutions for farmers\""
-            ],
-            followUp: "Just ask me anything or use the quick buttons below! I'm here to help 24/7."
-        });
+// PWA-like features for mobile
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        console.log('Leeila AI Agent with Enhanced Gradient Text loaded successfully!');
+    });
+}
+
+// Handle orientation changes
+window.addEventListener('orientationchange', function() {
+    setTimeout(() => {
+        scrollToBottom();
+        applyGradientTextEnhancements();
+    }, 500);
+});
+
+// Ensure gradient text compatibility across browsers
+function ensureGradientTextCompatibility() {
+    // Check if webkit-background-clip is supported
+    const testElement = document.createElement('div');
+    testElement.style.background = 'linear-gradient(45deg, red, blue)';
+    testElement.style.webkitBackgroundClip = 'text';
+    testElement.style.webkitTextFillColor = 'transparent';
+    
+    document.body.appendChild(testElement);
+    const computedStyle = window.getComputedStyle(testElement);
+    const isSupported = computedStyle.webkitBackgroundClip === 'text';
+    document.body.removeChild(testElement);
+    
+    if (!isSupported) {
+        // Add fallback class for browsers that don't support gradient text
+        document.body.classList.add('no-gradient-text-support');
+        console.log('Gradient text not supported, using fallback colors');
     }
-}, 45000);
+}
+
+// Initialize gradient text compatibility check
+document.addEventListener('DOMContentLoaded', ensureGradientTextCompatibility);
 
 // Export for external use
-window.SudarshanAI = {
+window.LeelilaAI = {
     sendMessage: sendUserMessage,
     openQuote: openQuoteModal,
     openContact: openContactModal,
+    openSettings: openSettingsModal,
     addToQuote: addToQuote,
+    toggleAI: () => elements.aiModeToggle?.click(),
     getConversationHistory: () => conversationHistory,
-    getSelectedServices: () => selectedServices
+    getSelectedServices: () => selectedServices,
+    getAIStatus: () => ({ connected: openAI?.isConnected, usage: openAI?.usageCount }),
+    applyGradientText: applyGradientTextEnhancements
 };
